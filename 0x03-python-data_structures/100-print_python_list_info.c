@@ -5,21 +5,15 @@
  * @p: a pointer to a pyobj
  * Return: is a void func
  */
-void print_python_list_info(PyObject *p)
-{
-	long int s, a, i;
-    PyObject *pyitem;
+void print_python_list_info(PyObject *p) {
+	Py_ssize_t size, i;
+	PyObject *item;
 
-	s = PyList_Size(p);
-	a = ((PyListObject *)p)->allocated;
+	printf("[*] Size of the Python List = %ld\n", PyList_Size(p));
+	printf("[*] Allocated = %ld\n", ((PyListObject *)p)->allocated);
 
-	printf("[*] Size of the Python List = %ld\n", s);
-	printf("[*] Allocated = %ld\n", a);
-
-	for (i = 0; i < s; i++)
-	{
-		pyitem = PyList_GetItem(p, i);
-		printf("Element %ld: %s\n", i, Py_TYPE(pyitem)->tp_name);
-
+	for (i = 0; i < PyList_Size(p); ++i) {
+		item = PyList_GetItem(p, i);
+		printf("Element %ld: %s\n", i, Py_TYPE(item)->tp_name);
 	}
 }
