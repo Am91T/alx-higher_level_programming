@@ -1,7 +1,13 @@
 #!/usr/bin/python3
-"""This module contains an empty class Rectangle"""
+
+"""
+This is a module for a class Rectangle
+"""
 
 
-class Rectangle():
-    """This class defines a Rectangle"""
-    pass
+class Rectangle:
+    """Class of a Rectangle"""
+
+    def __init__(self):
+        """Initialize class"""
+        pass
