@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-import json
+
 """
 This module convert data structures
 or objects into a format
 """
+
+import json
 
 
 def to_json_string(my_obj):
