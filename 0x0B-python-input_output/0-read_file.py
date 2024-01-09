@@ -16,4 +16,4 @@ def read_file(filename=""):
     Prints the content of the file to the standard output (console).
     """
     with open(filename, 'r') as file:
-        print(file.read())
+        print(file.read(), end="")
