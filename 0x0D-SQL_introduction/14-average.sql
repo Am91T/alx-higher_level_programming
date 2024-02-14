@@ -1,2 +1,4 @@
--- Avarage
-SELECT AVG(score) as average FROM second_table;
+-- script to computes
+-- the score average of all records
+SELECT AVG(score) AS average
+FROM second_table;

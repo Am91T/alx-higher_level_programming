@@ -1,2 +1,4 @@
--- count
-SELECT COUNT(*) FROM first_table WHERE id = 89;
+-- script count the number of records
+SELECT COUNT(*)
+FROM first_table
+WHERE id = 89;
